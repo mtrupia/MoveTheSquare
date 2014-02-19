@@ -59,11 +59,13 @@ public class GameView extends JPanel {
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g); // paint background
 		
-		g.setColor(Color.ORANGE);
-
-		Square square = model.getSquare();
 		
+		Square square = model.getSquare();
+		g.setColor(Color.BLUE);
 		g.fillRect((int) square.getX(), (int) square.getY(), (int) square.getWidth(), (int) square.getHeight());
+
+		g.setColor(Color.ORANGE);
+		g.fillRect((int) (square.getX()+3), (int) (square.getY()+3), (int) (square.getWidth()-6), (int) (square.getHeight()-6));
 	}
 	
 	public static void main(String[] args) {
