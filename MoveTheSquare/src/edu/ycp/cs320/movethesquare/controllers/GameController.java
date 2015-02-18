@@ -6,7 +6,6 @@ import edu.ycp.cs320.movethesquare.model.Square;
 public class GameController {
 	public void computeSquareMoveDirection(Game game, Square square, double mouseX, double mouseY) {
 		
-		
 		if (mouseX - square.getWidth()/2 >= 0 && mouseX + square.getWidth()/2 < game.getWidth() && mouseY - square.getHeight()/2 >= 0 && mouseY + square.getHeight()/2 < game.getHeight()) {
 			double dx = mouseX - (square.getX() + square.getWidth()/2);
 			double dy = mouseY - (square.getY() + square.getHeight()/2);
@@ -25,7 +24,8 @@ public class GameController {
 			
 			game.setSquareDx(moveX);
 			game.setSquareDy(moveY);
-		} else {
+		} 
+		else{
 			game.setSquareDx(0);
 			game.setSquareDy(0);
 		}

@@ -60,11 +60,10 @@ public class GameView extends JPanel {
 		super.paintComponent(g); // paint background
 		
 		Square square = model.getSquare();
-		g.setColor(Color.WHITE);
-		g.fillRect((int) square.getX(), (int) square.getY(), (int) square.getWidth(), (int) square.getHeight());
-
-		g.setColor(Color.BLACK);
-		g.fillRect((int) (square.getX()+3), (int) (square.getY()+3), (int) (square.getWidth()-6), (int) (square.getHeight()-6));
+		g.setColor(Color.GREEN);
+		g.fillOval((int) square.getX(), (int) square.getY(), (int) square.getWidth(), (int) square.getHeight());
+		g.setColor(Color.PINK);
+		g.fillOval((int) (square.getX()+3), (int) (square.getY()+3), (int) (square.getWidth()-6), (int) (square.getHeight()-6));
 	}
 	
 	public static void main(String[] args) {
@@ -78,8 +77,8 @@ public class GameView extends JPanel {
 				Square square = new Square();
 				square.setX(100.0);
 				square.setY(100.0);
-				square.setWidth(100.0);
-				square.setHeight(100.0);
+				square.setWidth(25.0);
+				square.setHeight(25.0);
 				model.setSquare(square);
 				
 				GameController controller = new GameController();
